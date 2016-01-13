@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "LigaBasquet",
+    "packageName": "com.example",
+    "packageFolder": "com/example",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "enableTranslation": true,
+    "rememberMeKey": "cf08bff6467be9d8dfc26c103bdceeb758765311"
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "socio",
+            "otherEntityName": "socio",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "entrenador",
+            "otherEntityName": "entrenador",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "equipo"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "estadio",
+            "otherEntityName": "estadio",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "equipo"
+        },
+       {
+            "relationshipId": 4,
+            "relationshipName": "jugador",
+            "otherEntityName": "jugador",
+            "otherEntityField": "id",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "equipo"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "temporada",
+            "otherEntityName": "temporada",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "fechaCreacion",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20151126192848",
+    "dto": "no",
+    "pagination": "pagination"
+}

@@ -1,0 +1,29 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "equipo",
+            "otherEntityName": "equipo",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "liga",
+            "otherEntityName": "liga",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "any",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151202155251",
+    "dto": "no",
+    "pagination": "pagination"
+}

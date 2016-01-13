@@ -1,0 +1,64 @@
+
+<div>
+    <h2><span translate="ligabasquetApp.equipo.detail.title">Equipo</span> {{equipo.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="ligabasquetApp.equipo.nombre">Nombre</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{equipo.nombre}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabasquetApp.equipo.fechaCreacion">FechaCreacion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{equipo.fechaCreacion}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabasquetApp.equipo.socio">socio</span>
+                </td>
+                <td>
+                    <span ng-repeat="socio in equipo.socios">
+                        <a class="form-control-static" ui-sref="socio.detail({id: {{socio.id}}})">{{socio.id}}</a>{{$last ? '' : ', '}}
+                    <span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabasquetApp.equipo.entrenador">entrenador</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="entrenador.detail({id:equipo.entrenador.id})">{{equipo.entrenador.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligabasquetApp.equipo.estadio">estadio</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="estadio.detail({id:equipo.estadio.id})">{{equipo.estadio.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

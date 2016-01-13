@@ -1,0 +1,47 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "equipo",
+            "otherEntityName": "equipo",
+            "otherEntityField": "id",
+            "relationshipType": "many-to-one",
+            "otherEntityRelationshipName": "jugador"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "fecha",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "canastas",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "asistencias",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "rebotes",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "posicion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151126185436",
+    "dto": "no",
+    "pagination": "pagination"
+}

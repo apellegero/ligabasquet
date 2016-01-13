@@ -1,0 +1,59 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "estadisticas",
+            "otherEntityName": "estadisticas",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "arbitro",
+            "otherEntityName": "arbitro",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "temporada",
+            "otherEntityName": "temporada",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "equipoLocal",
+            "otherEntityName": "equipo",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "partido"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "EquipoVisitante",
+            "otherEntityName": "equipo",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "partido"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "marcadorLocal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "marcadorVisitante",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151202155952",
+    "dto": "no",
+    "pagination": "pagination"
+}

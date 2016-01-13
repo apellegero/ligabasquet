@@ -1,0 +1,21 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "liga",
+            "otherEntityName": "liga",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nombre",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151202155513",
+    "dto": "no",
+    "pagination": "pagination"
+}

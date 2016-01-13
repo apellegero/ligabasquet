@@ -1,0 +1,27 @@
+{
+    "ligabasquetApp": {
+        "partido" : {
+            "home": {
+                "title": "Partidos",
+                "createLabel": "Create a new Partido",
+                "createOrEditLabel": "Create or edit a Partido"
+            },
+            "created": "A new Partido is created with identifier {{ param }}",
+            "updated": "A Partido is updated with identifier {{ param }}",
+            "deleted": "A Partido is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Partido {{ id }}?"
+            },
+            "detail": {
+                "title": "Partido"
+            },
+            "marcador": "Marcador",
+            "marcadorVisitante": "MarcadorVisitante",
+            "estadisticas": "Estadisticas",
+            "arbitro": "Arbitro",
+            "temporada": "Temporada",
+            "equipoLocal": "EquipoLocal",
+            "EquipoVisitante": "EquipoVisitante"
+        }
+    }
+}

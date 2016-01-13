@@ -1,0 +1,42 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "jugador",
+            "otherEntityName": "jugador",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "canastes",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "asistencies",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "rebotes",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "faltas",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "puntos",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20151202154645",
+    "dto": "no",
+    "pagination": "pagination"
+}
