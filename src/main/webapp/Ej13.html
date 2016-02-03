@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+    table, th , td {
+        border: 1px solid #003333;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+</style>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl">
+
+    <label>Nombre: <input ng-model="search.name"></label> <br>
+    <label>Canastas: <input ng-model="search.canastas"></label><br>
+    <label>Asistencias: <input ng-model="search.asistencias"></label><br>
+    <label>Rebotes: <input ng-model="search.rebotes"></label><br>
+    <label>Posicion: <input ng-model="search.posicion"></label><br>
+
+    <table>
+        <tr ng-repeat="x in names | filter:search:strict">
+            <td ng-if="$odd" style="background-color:#669999">
+                {{ x.name }}</td>
+            <td ng-if="$even">
+                {{ x.name }}</td>
+            <td ng-if="$odd" style="background-color:#669999">
+                {{ x.fecha }}</td>
+            <td ng-if="$even">
+                {{ x.fecha }}</td>
+            <td ng-if="$odd" style="background-color:#669999">
+                {{ x.canastas }}</td>
+            <td ng-if="$even">
+                {{ x.canastas }}</td>
+            <td ng-if="$odd" style="background-color:#669999">
+                {{ x.asistencias }}</td>
+            <td ng-if="$even">
+                {{ x.asistencias }}</td>
+            <td ng-if="$odd" style="background-color:#669999">
+                {{ x.rebotes }}</td>
+            <td ng-if="$even">
+                {{ x.rebotes }}</td>
+            <td ng-if="$odd" style="background-color:#669999">
+                {{ x.posicion }}</td>
+            <td ng-if="$even">
+                {{ x.posicion }}</td>
+        </tr>
+    </table>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+        $http.get("api/jugadors")
+            .then(function (response) {$scope.names = response.data});
+    });
+</script>
+
+</body>
+</html>

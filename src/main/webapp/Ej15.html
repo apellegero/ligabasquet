@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+    input.ng-pristine {
+        background-color:lightcoral;
+    }
+    input.ng-dirty {
+        background-color:lightgreen;
+    }
+</style>
+<body ng-app="">
+
+<form name ="myForm">
+    <p>Nombre:
+        <input type="text" name="name" ng-model="name" required>
+        <span ng-show="myForm.name.$touched && myForm.name.$invalid">Inserta el nom del jugador.</span>
+    </p>
+    <p>Fecha:
+        <input type="date" name="fecha" ng-model="fecha" required>
+        <span ng-show="myForm.fecha.$touched && myForm.fecha.$invalid">Inserta el data de neixament del jugador.</span>
+    </p>
+    <p>Cansastas:
+        <input type="number" name="canastas" ng-model="canastas" required>
+        <span ng-show="myForm.canastas.$touched && myForm.canastas.$invalid">Inserta numero de canastas.</span>
+    </p>
+    <p>Asistencias:
+        <input type="number" name="asistencias" ng-model="asistencias" required>
+        <span ng-show="myForm.asistencias.$touched && myForm.asistencias.$invalid">Inserta numero de asistencias.</span>
+    </p>
+    <p>Rebotes:
+        <input type="number" name="rebotes" ng-model="rebotes" required>
+        <span ng-show="myForm.rebotes.$touched && myForm.rebotes.$invalid">Inserta numero de rebotes.</span>
+    </p>
+    <p>Posicion:
+        <input type="text" name="posicion" ng-model="posicion" required>
+        <span ng-show="myForm.posicion.$touched && myForm.posicion.$invalid">Elige la posicion principal del jugador.</span>
+    </p>
+</form>
+
+</body>
+</html>

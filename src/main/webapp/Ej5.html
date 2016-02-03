@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<p>Jugadors ordenats per canastas:</p>
+<ul>
+  <li ng-repeat="x in names | orderBy:'canas'">
+    {{ x.name + ', ' + x.naix+','+x.canas+','+x.asis+','+x.reb }}
+  </li>
+</ul>
+<p>Los datos int se ordenan de menor a mayor y en cambio los strings en orden alfabetico</p>
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.names = [
+        {name:'Jani',naix:'12/09/2000',canas:190,asis:48,reb:11},
+        {name:'Carl',naix:'02/11/2002',canas:200,asis:98,reb:1},
+        {name:'Margareth',naix:'15/11/1990',canas:90,asis:43,reb:41},
+        {name:'Hege',naix:'12/09/2000',canas:10,asis:4,reb:412},
+        {name:'Joe',naix:'12/09/2000',canas:450,asis:8,reb:212},
+        {name:'Gustav',naix:'12/09/2000',canas:0,asis:0,reb:15},
+        {name:'Birgit',naix:'12/09/2000',canas:25,asis:9,reb:51},
+        {name:'Mary',naix:'12/09/2000',canas:12,asis:4,reb:31},
+        {name:'Kai',naix:'12/09/2000',canas:11,asis:8,reb:14}
+        ];
+});
+</script>
+
+</body>
+</html>
